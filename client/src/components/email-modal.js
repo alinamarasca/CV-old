@@ -53,6 +53,7 @@ const emailForm = (...labels) => {
   const button = document.createElement("button");
   button.id = "submit";
   button.type = "submit";
+  button.type = "button";
   button.innerText = "Send";
   button.addEventListener("click", closeModalHandler);
   form.appendChild(button);
