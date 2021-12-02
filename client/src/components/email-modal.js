@@ -1,7 +1,6 @@
 import closeModalHandler from "../handlers/close-modal-handler.js";
 
 const emailForm = (...labels) => {
-  debugger;
   //modal
   const modalBg = document.createElement("div");
   modalBg.className = "modal-bg";

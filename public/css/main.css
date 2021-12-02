@@ -293,6 +293,10 @@ aside .extra-info span {
   height: fit-content;
   padding: 0.5em;
   margin: 1rem;
+  transition: 170ms ease-in-out;
+}
+.modal-bg form #submit:hover {
+  transform: scale(1.05);
 }
 
 @media only screen and (max-width: 1000px) {

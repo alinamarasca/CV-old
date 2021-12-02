@@ -6,7 +6,6 @@ import openModalHandler from "./handlers/open-modal-handler.js";
 
 const cvPage = () => {
   sendEmail.addEventListener("click", openModalHandler);
-  // console.log(document);
   document.addEventListener("click", (e) => {
     if (e.target.className === "modal-bg") {
       closeModalHandler();
