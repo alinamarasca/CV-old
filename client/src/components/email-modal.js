@@ -25,7 +25,7 @@ const emailForm = (...labels) => {
     const input = document.createElement("input");
     input.type = "hidden";
     input.name = "_next";
-    input.value = "http://127.0.0.1:5500/";
+    input.value = "https://alinamarasca.github.io/CV-page/";
     inputControl.appendChild(input);
     // end //
     const labelEl = document.createElement("label");
