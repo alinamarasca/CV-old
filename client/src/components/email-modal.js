@@ -57,7 +57,9 @@ const emailForm = (...labels) => {
   button.setAttribute("form", "contact-form");
   button.type = "submit";
   button.innerText = "Send";
-  button.addEventListener("click", closeModalHandler);
+  button.addEventListener("click", () =>
+    modal.classList.remove("modal-active")
+  );
   form.appendChild(button);
   //append
   modalBg.appendChild(modal);
