@@ -1,6 +1,7 @@
 import closeModalHandler from "../handlers/close-modal-handler.js";
 
 const emailForm = (...labels) => {
+  debugger;
   //modal
   const modalBg = document.createElement("div");
   modalBg.className = "modal-bg";
@@ -13,6 +14,7 @@ const emailForm = (...labels) => {
   modal.appendChild(closeModal);
   //form
   const form = document.createElement("form");
+  form.id = "contact-form";
   form.action = `https://formsubmit.co/alinamarasca@gmail.com`;
   form.method = "POST";
 
@@ -52,8 +54,8 @@ const emailForm = (...labels) => {
   });
   const button = document.createElement("button");
   button.id = "submit";
+  button.setAttribute("form", "contact-form");
   button.type = "submit";
-  button.type = "button";
   button.innerText = "Send";
   button.addEventListener("click", closeModalHandler);
   form.appendChild(button);
