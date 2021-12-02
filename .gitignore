@@ -1,1 +1,4 @@
-/public/css/main.css.map
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
