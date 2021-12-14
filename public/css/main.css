@@ -132,7 +132,8 @@ aside ul {
   margin-top: 2rem;
   margin: auto;
 }
-aside ul .fas, aside ul .fab {
+aside ul .fas,
+aside ul .fab {
   margin: 0.5rem;
   margin-right: 10px;
   font-size: 2.2rem;
@@ -140,7 +141,8 @@ aside ul .fas, aside ul .fab {
   color: #00627a;
   opacity: 0.8;
 }
-aside ul .fas:hover, aside ul .fab:hover {
+aside ul .fas:hover,
+aside ul .fab:hover {
   color: #00B4E0;
 }
 aside .extra-info {
@@ -272,7 +274,8 @@ aside .extra-info span {
   text-align: left;
   color: #00627a;
 }
-.modal-bg form .input-control input, .modal-bg form .input-control textarea {
+.modal-bg form .input-control input,
+.modal-bg form .input-control textarea {
   width: 500px;
   max-width: 100%;
   height: 2rem;
@@ -281,7 +284,8 @@ aside .extra-info span {
 .modal-bg form .input-control textarea {
   height: 400px;
 }
-.modal-bg form .input-control input:focus, .modal-bg form .input-control textarea:focus {
+.modal-bg form .input-control input:focus,
+.modal-bg form .input-control textarea:focus {
   border: none;
   outline: 2px solid #00B4E0;
 }
@@ -304,7 +308,10 @@ aside .extra-info span {
     display: block;
   }
 
-  aside, .intro, .about, .projects {
+  aside,
+.intro,
+.about,
+.projects {
     margin-bottom: 1rem;
   }
 

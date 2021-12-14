@@ -1,237 +1,225 @@
-@use 'abstracts' as *;
-@use 'utilities' as *;
+@use "abstracts" as *;
+@use "utilities" as *;
 
-*{
+* {
   box-sizing: border-box;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 
-body{
+body {
   font-family: $font-stack;
-  font-size:1.45em;
-  line-height: 150%;;
+  font-size: 1.45em;
+  line-height: 150%;
   font-weight: 500;
   @extend %bgr;
 
- button{
-   border:0;
-   background-color: transparent;
-   }
-button:hover{
-  cursor: pointer;
-}
-.icon{
-
-height:40px;
+  button {
+    border: 0;
+    background-color: transparent;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  .icon {
+    height: 40px;
   }
 
-  a{
+  a {
     text-decoration: none;
   }
 }
 
-
-.wrapper{
-  width:80%;
+.wrapper {
+  width: 80%;
   min-width: 400px;
-  margin:auto;
-  display:grid;
+  margin: auto;
+  display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-areas: 
-  "aside intro"
-  "aside about"
-  " projects projects";
+  grid-template-areas:
+    "aside intro"
+    "aside about"
+    " projects projects";
   gap: 30px;
   align-content: center;
   justify-content: center;
   padding: 1.5rem 0;
 }
 
-h2{
+h2 {
   font-size: 3rem;
-  color:$text-accent-color;
+  color: $text-accent-color;
   margin: 0.5rem 0 0.5em 0;
 }
-h3{
+h3 {
   font-size: 1.8rem;
-  color:$text-accent-color;
+  color: $text-accent-color;
   margin: 1.5rem 0;
-
-  
 }
 
 // side section
-aside{
+aside {
   grid-area: aside;
-  min-width:330px;
+  min-width: 330px;
 
   @extend %section;
 
-    .photo {
-      justify-self:center;
-      z-index:0;
-      margin-bottom: 3rem;
-      display: flex;
-
+  .photo {
+    justify-self: center;
+    z-index: 0;
+    margin-bottom: 3rem;
+    display: flex;
 
     img {
       max-width: 300px;
-      width:100%;
+      width: 100%;
       height: auto;
       border-radius: 50%;
-      margin:auto;
+      margin: auto;
     }
   }
-  
-  ul{
+
+  ul {
     @extend %inline-ul;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width:330px;
+    max-width: 330px;
     margin-top: 2rem;
-    margin:auto;
-    
+    margin: auto;
 
-      .fas, .fab{
-        margin: 0.5rem;
-        margin-right: 10px;
-        font-size: 2.2rem;
-        margin-bottom:1rem;
-        color:$text-accent-color;
-        opacity: 0.8;
-      }
+    .fas,
+    .fab {
+      margin: 0.5rem;
+      margin-right: 10px;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: $text-accent-color;
+      opacity: 0.8;
+    }
 
-      .fas:hover, .fab:hover{
+    .fas:hover,
+    .fab:hover {
       color: $accent-color;
-      }
+    }
   }
 
+  .extra-info {
+    margin-top: 3rem;
+    font-size: 1.125rem;
+    text-align: center;
 
+    div {
+      margin-bottom: 3rem;
+    }
+    .download-cv {
+      color: $text-accent-color;
+      font-weight: 600;
+    }
 
-.extra-info{
-  margin-top: 3rem;
-  font-size: 1.125rem;
-  text-align: center;
+    ul {
+      display: block;
+    }
 
-  div{
-    margin-bottom: 3rem;
+    span {
+      color: $text-accent-color;
+      font-weight: 600;
+    }
   }
-  .download-cv{
-    color: $text-accent-color;
-    font-weight: 600;
-  }
-
-  ul{
-    display: block;
-  }
-
-  span{
-    color:$text-accent-color;
-    font-weight: 600;
-  }
-  
-}
-
 }
 // Hello section
-.intro{
+.intro {
   @extend %section;
-  width:100%;
+  width: 100%;
 
-  .intro-text{
+  .intro-text {
     grid-area: intro;
     line-height: 150%;
     align-self: center;
-    justify-self:center;
+    justify-self: center;
   }
 
-  span{
-    color:$accent-color;
-    font-weight:700;
+  span {
+    color: $accent-color;
+    font-weight: 700;
   }
-  
-  }
+}
 // about section
-  .about{
-    @extend %section;
-    width:100%;
+.about {
+  @extend %section;
+  width: 100%;
 
-    span {
+  span {
     position: relative;
-    white-space: nowrap; 
+    white-space: nowrap;
   }
 
-  span::before{
+  span::before {
     @extend %highlighter;
     background-color: lighten($accent-color, 30%);
   }
 
-  ul{
+  ul {
     @extend %inline-ul;
     margin-top: -2rem;
-    li{
+    li {
       @extend %spaced-li;
     }
   }
-
-  }
+}
 // projects section
-  .projects{
-    grid-area: projects;
-    width: 100%;
-    justify-self: center;
-    padding-bottom: 4rem;
-    @extend %section;
-    
-    h3{
-      margin-top: 0;
-    }
-    .project-cards{
+.projects {
+  grid-area: projects;
+  width: 100%;
+  justify-self: center;
+  padding-bottom: 4rem;
+  @extend %section;
+
+  h3 {
+    margin-top: 0;
+  }
+  .project-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .project {
+      @extend %card;
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      text-align: center;
       justify-content: space-evenly;
 
-      .project{
-        @extend %card;
+      h4 {
+        position: relative;
+        margin: 1rem 0;
+        font-weight: 500;
+        font-size: 0.95rem;
+        color: $text-accent-color;
+      }
+
+      .description {
         display: flex;
-        text-align: center;
+        flex-direction: row;
         justify-content: space-evenly;
-
-        h4{
-          position:relative;
-          margin: 1rem 0;
-          font-weight: 500;
-          font-size:0.95rem;
-          color:$text-accent-color;
-        }
-
-          .description{
-          display:flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-        }
       }
     }
   }
+}
 
 // modal
-  .modal-bg {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  
   .modal-body {
     background-color: #fff;
     position: relative;
@@ -244,7 +232,6 @@ aside{
     align-items: center;
     box-shadow: $shadow;
 
-
     #close-modal {
       color: $text-accent-color;
       position: absolute;
@@ -253,70 +240,76 @@ aside{
       cursor: pointer;
       opacity: 0.6;
     }
-    
+
     #close-modal:hover {
       opacity: 1;
     }
   }
-  
+
   form {
-    max-width:100%;
+    max-width: 100%;
     display: block;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    font-size:1rem;
+    font-size: 1rem;
 
-    .input-control{
+    .input-control {
       display: flex;
       flex-direction: column;
       text-align: left;
       color: $text-accent-color;
-      
-      input, textarea{
+
+      input,
+      textarea {
         width: 500px;
-        max-width:100%;
+        max-width: 100%;
         height: 2rem;
         padding: 2rem, 0.5rem;
       }
 
-      textarea{
-        height:400px;
+      textarea {
+        height: 400px;
       }
 
-      input:focus, textarea:focus{
-        border:none;
+      input:focus,
+      textarea:focus {
+        border: none;
         outline: 2px solid $accent-color;
       }
     }
 
-    #submit{
+    #submit {
       font-size: 1.5rem;
       background-color: $accent-color;
       color: #fff;
       width: fit-content;
-      height:fit-content;
-      padding:0.5em;
+      height: fit-content;
+      padding: 0.5em;
       margin: 1rem;
       transition: 170ms ease-in-out;
     }
 
-    #submit:hover{
+    #submit:hover {
       transform: scale(1.05);
     }
   }
-  } 
-  
+}
+
 // responsive
-  @media only screen and (max-width: 1000px) {
-    .wrapper {
+@media only screen and (max-width: 1000px) {
+  .wrapper {
     display: block;
-    }
-    aside, .intro, .about, .projects{
-      margin-bottom: 1rem;
-    }
-    .aside{
-      width:100%;
-    }
   }
-  
+  aside,
+  .intro,
+  .about,
+  .projects {
+    margin-bottom: 1rem;
+  }
+  .aside {
+    width: 100%;
+  }
+}
+
+//Make intro aside go to the top, narrow with icons - when click on the photo -> unfold?
