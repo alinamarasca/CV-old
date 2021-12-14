@@ -1,4 +1,5 @@
 # CV
+
 is web version of my CV.
 
 - [CV](#cv)
@@ -12,14 +13,16 @@ is web version of my CV.
 ![rsz_2rsz_1rsz_cv_pixel](https://user-images.githubusercontent.com/75176258/144755343-53b378f4-85f9-4025-848e-d0ae7d458ef3.jpg)
 
 ## Created using:
+
 - HTML <br>
-- CSS  <br>
-- JS  <br>
+- CSS <br>
+- JS <br>
 - SASS <br>
 - [Formsubmit](https://formsubmit.co/)<br>
 - [Calendly](https://calendly.com/) <br>
 
 ## Features:
+
 - responsive layout <br>
 - allows to download PDF version of my CV <br>
 - allows to send email(using [Formsubmit](https://formsubmit.co/)) <br>
